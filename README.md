@@ -1,25 +1,22 @@
-## Building the rails App
+# RAD2020 Assignmnet
 
-1. Run `docker-compose build` after every Gemfile change or to build the containers
+### Development Team
+  Matthew Walters
 
-## Running the rails App
-1. Run `docker-compose up` to run the rails app
-2. hit `http://0.0.0.0:3000`
+### Highest Level attempted
+  PA
 
-## Debugging the Rails App
+### Time Sheet
+  Tracked with Toggl.com
+  Time sheet data is availble in the uploaded PDF in the submission zip file
+  Located Here: ```/File_Location/```
 
-1. Add `binding.pry` or `byebug` in your code where you want to put the breakpoint.
-2. Run `docker-compose run --service-port --rm web` in your console to run the rails app in Debug mode
-3. Access the endpoint you are debugging to go into debugging mode in pry or byebug
+### Task management
+  All tasks and agile workflow was managed through the use of Trello. This can be seen through the invite link below.
+  [Invite Link](https://trello.com/invite/b/M6gk9cgF/6cd8b2de51e00a90eb50395aa881bc2d/rad-news-plus)
 
-## Rails CHEATSHEET using docker
+### Reference List
+*All in-text citations from the code are listed here in IEEE style*
 
-1. `docker-compose run --rm web rails new . --force --no-deps --database=postgresql`
-2. `docker-compose run --rm web bundle install`
-3. `docker-compose run --rm web bundle update`
-4. `docker-compose run --rm web rails db:create`
-5. `docker-compose run --rm web rails db:migrate`
-6. `docker-compose run --rm web rails db:drop`
-7. `docker-compose run --rm web rails assets:precompile`
-8. `docker-compose run --rm web rails console`
-9. `docker-compose run --rm web rails test`
+- [1] Michael Hartl, *Ruby on Rails Tutorial - Learn Web Development with Rails*, 2020, [Online], Available: https://ap01-a.alma.exlibrisgroup.com/view/delivery/61RMIT_INST/12241421650001341
+- **LAST ENTRY**
