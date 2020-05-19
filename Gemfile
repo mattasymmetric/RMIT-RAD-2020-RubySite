@@ -16,9 +16,9 @@ gem 'puma', '~> 3.11'
 
 # Additional gems from assignment spec
 
-gem 'bootstrap-sass',
-gem 'jquery-rails',
-gem 'carrierwave',
+gem 'bootstrap-sass'
+gem 'jquery-rails'
+gem 'carrierwave'
 gem 'font-awesome-rails'
 
 # ALL PRE EXISTING GEMs
@@ -80,4 +80,5 @@ group :test do
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+# gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+# Developing on WSL, gem not needed.
