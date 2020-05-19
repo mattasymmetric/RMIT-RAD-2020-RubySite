@@ -1,0 +1,130 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+/* Variables */
+
+$header-background: #263238;
+$light-text-colour: #dcdcdc;
+$active-colour: #e67e22;
+
+/* All Elements */
+
+
+body {
+  padding-top: 12rem;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+}
+
+.center h1 {
+  margin-bottom: 10px;
+}
+
+/* Typography */
+
+/*typography*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.2em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: #777;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+
+/* Nav bar*/
+
+.navbar {
+  padding: 1.5rem 0;
+  background-color: $header-background;
+}
+
+.active a {
+  background-color: $header-background !important;
+}
+
+.navbar-nav {
+  padding-left: 5rem;
+}
+
+.nav > li > a {
+  margin: 0 1.25rem;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+  color: $light-text-colour;
+}
+
+.navbar-nav .active a::after {
+  border-bottom: 5px solid $active-colour;
+  bottom: 0rem;
+  content: " ";
+  left: 0;
+  right: 0;
+  position: absolute;
+}
+
+.navbar-brand {
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+
+.user-image a {
+  padding: 0 !important;
+  /* margin: 0 !important */;
+  img {
+  }
+}
+
+/* Footer */
+
+.footer {
+  background-color: $header-background;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+
+  div { 
+    color: $light-text-colour;
+    font-size: 1.2em;
+    text-align: center;
+    font-weight: normal;
+  }
+
+}
