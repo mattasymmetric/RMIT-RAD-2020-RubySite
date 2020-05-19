@@ -10,4 +10,7 @@ class User < ApplicationRecord
   validates :phone, presence: true, length: { in: 10..13}, numericality: { only_integer: true }
 
   has_secure_password
+  validates :password, presence: true, length: {minimum: 6}, allow_nil: true
+
+
 end

@@ -21,6 +21,9 @@ gem 'jquery-rails'
 gem 'carrierwave'
 gem 'font-awesome-rails'
 
+# ADDED FROM TUTORIALS, NEEDS CLARIFICATIOn
+gem 'rails-controller-testing'
+
 # ALL PRE EXISTING GEMs
 
 # Use SCSS for stylesheets
