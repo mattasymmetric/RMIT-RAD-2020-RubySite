@@ -4,6 +4,7 @@
 /* Variables */
 
 $header-background: #263238;
+$area-background: #A9A9A9;
 $light-text-colour: #dcdcdc;
 $active-colour: #e67e22;
 
@@ -219,4 +220,26 @@ aside {
 #session_remember_me {
   width: auto;
   margin-left: 0;
+}
+
+/* Content */
+
+.col-md-8.section, .col-md-4.section {
+  padding: 1rem;
+  min-height: 50rem;
+  p {
+    background-color: $area-background;
+  }
+}
+
+body {
+  background-color: #DCDCDC;
+}
+
+.container {
+  width: 1600px !important;
+}
+
+.homepage-settings {
+  padding: 1rem;
 }
