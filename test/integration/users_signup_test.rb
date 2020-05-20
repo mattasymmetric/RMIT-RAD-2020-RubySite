@@ -10,7 +10,7 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
     end
     assert_template 'users/new'
     assert_not flash[:success]
-    # assert_not is_logged_in?
+    assert_not is_logged_in?
   end
 
   test 'valid signup information' do
@@ -21,6 +21,6 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
     follow_redirect!
     assert_template 'users/show'
     assert_not flash[:danger]
-    # assert is_logged_in?
+    assert is_logged_in?
   end
 end
