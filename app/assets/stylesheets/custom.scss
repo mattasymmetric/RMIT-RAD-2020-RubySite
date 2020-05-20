@@ -115,8 +115,13 @@ p {
   font-weight: bold;
 }
 
-.user-image a {
+.dropdown-toggle.user-image {
   padding: 0 !important;
+}
+
+.dropdown-menu {
+  position: absolute;
+  min-width: 0;
 }
 
 /* Footer */
@@ -196,7 +201,7 @@ aside {
 }
 .gravatar {
   float: left;
-  margin-right: 10px;
+  border-radius: 50%;
 }
 .gravatar_edit {
   margin-top: 15px;

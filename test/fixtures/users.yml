@@ -5,3 +5,9 @@ michael:
   email: michael@example.com
   phone: 12345678910
   password_digest: <%= User.digest('password') %>
+
+archer:
+  displayname: Sterling Archer
+  email: duchess@example.gov
+  phone: 9876543210
+  password_digest: <%= User.digest('password') %>
