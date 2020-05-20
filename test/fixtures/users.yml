@@ -5,9 +5,18 @@ michael:
   email: michael@example.com
   phone: 12345678910
   password_digest: <%= User.digest('password') %>
+  admin: true
 
 archer:
   displayname: Sterling Archer
   email: duchess@example.gov
-  phone: 9876543210
+  phone: 12345678910
   password_digest: <%= User.digest('password') %>
+
+<% 30.times do |n| %>
+user_<%= n %>:
+  displayname:  <%= "User #{n}" %>
+  email: <%= "user-#{n}@example.com" %>
+  phone: 12345678910
+  password_digest: <%= User.digest('password') %>
+<% end %>

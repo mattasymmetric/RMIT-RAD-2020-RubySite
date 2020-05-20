@@ -5,3 +5,13 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+User.new(displayname: "RAD", email: "rad", phone: "1234567891", password: "Rails2020", password_confirmation: "Rails2020", admin: true).save(validate: false)
+    
+99.times do |n| 
+  displayname = "Test Name #{n+1}"
+  email = "example-#{n+1}@email.com"
+  phone = "1234567891"
+  password = "SecurePassword"
+  User.create!(displayname: displayname, email: email,phone: phone, password: password, password_confirmation: password)
+end

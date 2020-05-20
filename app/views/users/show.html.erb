@@ -5,6 +5,12 @@
       <h1>
         <%=gravatar_for@user%>
         <%=@user.displayname%>
+        <% if logged_in? %>
+          <% if @current_user.admin? && !current_user?(@user) %>
+          | <%= link_to "Delete User", @user, method: :delete, 
+            data: {confirm: "Are you sure you want to delete this user?"}%>
+          <%end%>
+        <%end%>
       </h1>
     </section>
   </aside>
