@@ -9,6 +9,7 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
       post users_path, params: { user: { email: 'user@invalid', phone: 'bruh', password: 'foo', password_confirmation: 'bar' } }
     end
     assert_template 'users/new'
+    assert_not flash[:success]
     # assert_not is_logged_in?
   end
 
@@ -19,6 +20,7 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
     end
     follow_redirect!
     assert_template 'users/show'
+    assert_not flash[:danger]
     # assert is_logged_in?
   end
 end
