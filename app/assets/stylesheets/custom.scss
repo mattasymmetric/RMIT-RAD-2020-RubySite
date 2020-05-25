@@ -4,9 +4,11 @@
 /* Variables */
 
 $header-background: #263238;
-$area-background: #A9A9A9;
+$area-background: #E0E0E0;
 $light-text-colour: #dcdcdc;
 $active-colour: #e67e22;
+$main-background: #EEEEEE;
+$heading-background: #B0BEC5;
 
 @mixin box_sizing {
   -moz-box-sizing: border-box;
@@ -223,20 +225,62 @@ aside {
   margin-left: 0;
 }
 
-/* Content */
+/* Home Page Content */
 
-.col-lg-8, .col-lg-4, .col-lg-12 {
+@mixin section-heading-bar {
+  @extend h4;
+  background-color: $heading-background;
+}
+.col-md-8,
+.col-md-4,
+.col-md-12 {
   padding: 1rem;
-  min-height: 5rem;
-  p {
-    background-color: $area-background;
-  }
 }
 
 body {
-  background-color: #DCDCDC;
+  background-color: $main-background;
 }
 
 .container-fluid {
   width: 95%;
+}
+
+/* All Posts */
+table {
+  th {
+    @include section-heading-bar;
+  }
+}
+
+.post {
+  display: flex;
+  align-items: center;
+  background-color: $area-background;
+  .post-image {
+    width: 60px;
+    margin: 0;
+    padding: 0.125rem;
+    padding-left: 0.7rem;
+  }
+
+  .container-fluid .row {
+    .post-heading {
+      @extend h5 ;
+    }
+    .post-details, .post-stats {
+      @extend h6 ;
+    }
+  }
+}
+
+.options-section, .options-section-top {
+  background-color: $area-background;
+  margin-bottom: 2.5rem;
+  .options-heading {
+    padding: 1rem;
+    @include section-heading-bar;
+  }
+  .options-content {
+    padding: 1rem;
+  }
 }
