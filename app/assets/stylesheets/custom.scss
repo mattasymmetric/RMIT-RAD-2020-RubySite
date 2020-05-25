@@ -24,10 +24,6 @@ $active-colour: #e67e22;
 
 /* All Elements */
 
-body {
-  padding-top: 12rem;
-}
-
 section {
   overflow: auto;
 }
@@ -92,6 +88,10 @@ p {
   padding-left: 5rem;
 }
 
+.nav > li {
+  max-width: 20rem;
+}
+
 .nav > li > a {
   margin: 0 1.25rem;
 }
@@ -102,6 +102,7 @@ p {
 
 .navbar-nav .active a::after {
   border-bottom: 5px solid $active-colour;
+  width: inherit;
   bottom: 0rem;
   content: " ";
   left: 0;
@@ -224,9 +225,9 @@ aside {
 
 /* Content */
 
-.col-md-8.section, .col-md-4.section {
+.col-lg-8, .col-lg-4, .col-lg-12 {
   padding: 1rem;
-  min-height: 50rem;
+  min-height: 5rem;
   p {
     background-color: $area-background;
   }
@@ -236,10 +237,6 @@ body {
   background-color: #DCDCDC;
 }
 
-.container {
-  width: 1600px !important;
-}
-
-.homepage-settings {
-  padding: 1rem;
+.container-fluid {
+  width: 95%;
 }
