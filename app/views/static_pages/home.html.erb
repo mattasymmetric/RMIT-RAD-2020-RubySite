@@ -1,21 +1,16 @@
 <%provide(:title,"Home")%>
 <div class="container-fluid">
   <div class="row">
-    <div class="col-md-12 section">
+    <div class="col-md-8 section">
       <div class="options-section-top">
-        <div class="options-heading">
-          Top Option Bar
-        </div>
-        <div class="options-content">
-          1, 2, 3, 4
+        <div class="btn-group" role="group">
+          <button type="button" class="btn btn-default" onclick='window.location.href = "/";'>Recent Posts</button>
+          <button type="submit" form="selected-topics" class="btn btn-default">Selected Topics Only</button>
+          <button type="button" class="btn btn-default" onclick='window.location.href = "/";'>My Settings</button>
         </div>
       </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-8 section">
       <table class="table table-bordered">
-        <th>User News Posts</th>
+        <th>News Posts</th>
         <tbody>
           <tr>
             <td class="post">
@@ -43,18 +38,20 @@
     <div class="col-md-4 section">
       <div class="options-section">
         <div class="options-heading">
-          Section 1
+          Currently Online
         </div>
         <div class="options-content">
-          1, 2, 3, 4
+          1,2,3,4,5
         </div>
       </div>
       <div class="options-section">
         <div class="options-heading">
-          Section 2
+          Topics
         </div>
         <div class="options-content">
-          5, 6, 7, 8
+          <form id="selected-topics" action="" method="POST">
+            1,2,3,4,5
+          </form>
         </div>
       </div>
     </div>

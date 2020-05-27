@@ -4,10 +4,10 @@
 /* Variables */
 
 $header-background: #263238;
-$area-background: #E0E0E0;
+$area-background: #EEEEEE;
 $light-text-colour: #dcdcdc;
 $active-colour: #e67e22;
-$main-background: #EEEEEE;
+$main-background: #E0E0E0;
 $heading-background: #B0BEC5;
 
 @mixin box_sizing {
@@ -277,10 +277,16 @@ table {
   background-color: $area-background;
   margin-bottom: 2.5rem;
   .options-heading {
+    margin-top: 0;
     padding: 1rem;
     @include section-heading-bar;
   }
   .options-content {
     padding: 1rem;
   }
+}
+
+.options-section-top {
+  margin-bottom: 1rem;
+  background-color: $main-background;
 }
