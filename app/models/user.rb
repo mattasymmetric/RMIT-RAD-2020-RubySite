@@ -28,6 +28,10 @@ class User < ApplicationRecord
     self.remember_token = User.new_token
     update_attribute(:remember_digest, remember_token)
   end
+
+  def set_lastlogin
+    update_attribute(:lastlogin, Time.now)
+  end
   
   def authenticated?(remember_token)
     return false if remember_digest.nil?

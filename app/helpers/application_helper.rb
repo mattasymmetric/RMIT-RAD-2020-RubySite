@@ -13,9 +13,12 @@ module ApplicationHelper
   def navlink_class(path)
     if current_page?(path)
       "active"
+    elsif current_page?(root_path) && path == home_path
+      "active"
     else
       ""
     end
   end
 
 end
+ 
