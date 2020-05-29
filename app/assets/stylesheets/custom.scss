@@ -4,11 +4,11 @@
 /* Variables */
 
 $header-background: #263238;
-$area-background: #EEEEEE;
+$area-background: #eeeeee;
 $light-text-colour: #dcdcdc;
 $active-colour: #e67e22;
-$main-background: #E0E0E0;
-$heading-background: #B0BEC5;
+$main-background: #e0e0e0;
+$heading-background: #b0bec5;
 
 @mixin box_sizing {
   -moz-box-sizing: border-box;
@@ -177,6 +177,14 @@ input {
   }
 }
 
+.form-link {
+  float: right;
+}
+
+.user-session-form {
+  background-color: $area-background;
+}
+
 /* User show */
 aside {
   section.user_info {
@@ -265,15 +273,17 @@ table {
 
   .container-fluid .row {
     .post-heading {
-      @extend h5 ;
+      @extend h5;
     }
-    .post-details, .post-stats {
-      @extend h6 ;
+    .post-details,
+    .post-stats {
+      @extend h6;
     }
   }
 }
 
-.options-section, .options-section-top {
+.options-section,
+.options-section-top {
   background-color: $area-background;
   margin-bottom: 2.5rem;
   .options-heading {
@@ -289,4 +299,26 @@ table {
 .options-section-top {
   margin-bottom: 1rem;
   background-color: $main-background;
+}
+
+.home-form {
+  width: 100%;
+  height: 35px;
+  .btn-group {
+    float: left;
+  }
+  .input-group {
+    padding-left: 0.5rem;
+    float: left;
+    form {
+      display: flex;
+    }
+  }
+  .new-post-btn {
+    float: right;
+  }
+}
+
+.active-button {
+  color: orange;
 }

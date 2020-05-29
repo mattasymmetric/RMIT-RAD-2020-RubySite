@@ -1,12 +1,23 @@
 <%provide(:title,"Home")%>
 <div class="container-fluid">
   <div class="row">
-    <div class="col-md-8 section">
-      <div class="options-section-top">
+    <div class="col-md-8">
+      <div class="options-section-top section home-form">
         <div class="btn-group" role="group">
-          <button type="button" class="btn btn-default" onclick='window.location.href = "/";'>Recent Posts</button>
-          <button type="submit" form="selected-topics" class="btn btn-default">Selected Topics Only</button>
+          <button type="button" class="btn btn-default <%= home_button_class(@display, "recent") %> " onclick='window.location.href = "/";'>Recent Posts</button>
+          <button type="submit" value="submit" form="selected-topics" class="btn btn-default <%= home_button_class(@display, "selected") %>">Selected Topics Only</button>
           <button type="button" class="btn btn-default" onclick='window.location.href = "/";'>My Settings</button>
+        </div>
+        <div class="input-group">
+          <form action="">
+            <input type="text" class="form-control" placeholder="Search">
+            <span class="input-group-btn">
+              <button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+            </span>
+          </form>
+        </div>
+        <div class="new-post-btn">
+          <button type="button" class="btn btn-primary btn-md" onclick='window.location.href = "/";'>New Post</button>
         </div>
       </div>
       <table class="table table-bordered">
@@ -20,7 +31,7 @@
               <div class="container-fluid">
                 <div class="row">
                   <div class="post-heading col-xs-12">
-                    REEEEEEEEEEEEEEEEEEEEEEE the night away!
+                    bruh
                   </div>
                   <div class="post-details col-xs-9">
                     Post by "xXDestroyerXx", Date: bla bla, News
@@ -38,20 +49,38 @@
     <div class="col-md-4 section">
       <div class="options-section">
         <div class="options-heading">
-          Currently Online
+          Recent Members
         </div>
         <div class="options-content">
-          1,2,3,4,5
+          To FIll
         </div>
       </div>
       <div class="options-section">
         <div class="options-heading">
           Topics
         </div>
-        <div class="options-content">
-          <form id="selected-topics" action="" method="POST">
-            1,2,3,4,5
-          </form>
+        <div class="options-content">      
+          To Fill
+        </div>
+      </div>
+      <div class="options-section">
+        <div class="options-heading">
+          Posts
+        </div>
+        <div class="options-content">      
+          To Fill
+        </div>
+      </div>
+      <div class="options-section">
+        <div class="options-heading">
+          Links
+        </div>
+        <div class="options-content">      
+          <ul class="list-group">
+            <button type="button" class="list-group-item" onclick='window.location.href = "https://www.rmit.edu.au/"'>RMIT</button>
+            <button type="button" class="list-group-item" onclick='window.location.href = "https://rubyonrails.org/"'>RubyOnRails</button>
+            <button type="button" class="list-group-item" onclick='window.location.href = "https://github.com/mattasymmetric"'>Matthew Walters (GitHub)</button>
+          </ul>
         </div>
       </div>
     </div>
