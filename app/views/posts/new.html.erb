@@ -1,0 +1,16 @@
+<%provide(:title,"New Post")%>
+<div class="row">
+  <div class="col-md-4 col-md-offset-4">
+    <h3>New Post</h3>
+    <%=form_for(:post) do |f|%>
+      <%= render'shared/error_messages_posts' %>
+      <%=f.label :title%>
+      <%=f.text_field :title, class: 'form-control'%>
+      <%=f.label :topic%>
+      <%=f.collection_select :topic_id, @topics, :id, :name%>
+      <%=f.label :content%>
+      <%=f.text_area :content, placeholder: "Write your new post...", class: 'form-control'%>
+      <%=f.submit 'Post', class: "btn btn-primary"%>
+    <%end%>
+  </div>
+</div>

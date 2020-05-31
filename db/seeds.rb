@@ -6,6 +6,14 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Topic.destroy_all
+
+Topic.create!(name: "News")
+Topic.create!(name: "Topic 1")
+Topic.create!(name: "Topic 2")
+
+User.destroy_all
+
 User.new(displayname: "RAD", email: "rad", phone: "1234567891", password: "Rails2020", password_confirmation: "Rails2020", admin: true, lastlogin: Time.now).save(validate: false)
     
 99.times do |n| 

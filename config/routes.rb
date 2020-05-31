@@ -11,6 +11,10 @@ Rails.application.routes.draw do
   get '/login',     to: 'sessions#new'
   post '/login',    to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'
+  # Post views
+  get '/create',           to: 'posts#new'
+  post '/create',          to: 'posts#create'
   # Model Resources
   resources :users
+  resources :posts, only: [:show, :create, :destroy]
 end
