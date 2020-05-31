@@ -42,7 +42,6 @@
 ### Heroku Deployment URl
 https://rad-assignment-s3780012.herokuapp.com/
 
-##### Last Log
 ### Reference List
 *All in-text citations from the code are listed here in IEEE style*
 

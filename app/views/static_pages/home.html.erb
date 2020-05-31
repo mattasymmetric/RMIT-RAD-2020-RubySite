@@ -4,9 +4,11 @@
     <div class="col-md-8">
       <div class="options-section-top section home-form">
         <div class="btn-group" role="group">
-          <button type="button" class="btn btn-default <%= home_button_class(@display, "recent") %> " onclick='window.location.href = "/";'>Recent Posts</button>
+          <button type="button" class="btn btn-default <%= home_button_class(@display, "recent") %> " onclick='window.location.href = "/home";'>Recent Posts</button>
           <button type="submit" value="submit" form="selected-topics" class="btn btn-default <%= home_button_class(@display, "selected") %>">Selected Topics Only</button>
-          <button type="button" class="btn btn-default" onclick='window.location.href = "/";'>My Settings</button>
+          <% if logged_in? %>
+            <button type="button" class="btn btn-default" onclick='window.location.href = "<%= edit_user_path(current_user) %>";'>My Settings</button>
+          <% end %>
         </div>
         <div class="input-group">
           <form action="">
