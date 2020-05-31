@@ -17,32 +17,15 @@
           </form>
         </div>
         <div class="new-post-btn">
-          <button type="button" class="btn btn-primary btn-md" onclick='window.location.href = "/";'>New Post</button>
+          <button type="button" class="btn btn-primary btn-md" onclick='window.location.href = "/create";'>New Post</button>
         </div>
       </div>
       <table class="table table-bordered">
         <th>News Posts</th>
         <tbody>
-          <tr>
-            <td class="post">
-              <div class="post-image">
-                <%= image_tag("account_circle_white.svg", alt: "Logged Out User") %>
-              </div>
-              <div class="container-fluid">
-                <div class="row">
-                  <div class="post-heading col-xs-12">
-                    bruh
-                  </div>
-                  <div class="post-details col-xs-9">
-                    Post by "xXDestroyerXx", Date: bla bla, News
-                  </div>
-                  <div class="post-stats col-xs-3">
-                    X commments | X views
-                  </div>
-                </div>
-              </div>
-            </td>
-          </tr>
+          <% @posts.each do |post|%>
+            <%= render 'posts/post_thin', post: post %>
+          <% end %>
         </tbody>
       </table>
     </div>
@@ -52,7 +35,13 @@
           Recent Members
         </div>
         <div class="options-content">
-          To FIll
+          <ul class="list-group">
+            <% @users.each do |user|%>
+              <li class="list-group-item">
+              <%= link_to user.displayname, user %>
+              </li>
+            <% end %>
+          </ul>
         </div>
       </div>
       <div class="options-section">
@@ -60,7 +49,17 @@
           Topics
         </div>
         <div class="options-content">      
-          To Fill
+          <div class="btn-group col-xs-12" data-toggle="buttons">
+            <% @topics.each do |topic|%>
+            <label class="btn btn-default">
+              <input type="checkbox" name="<%=topic.name%>" value="<%=topic.name%>"><%=topic.name%>
+            </label>
+            <% end %>
+          </div>
+          </br>
+          </br>
+          </br>
+          </br>
         </div>
       </div>
       <div class="options-section">
@@ -68,7 +67,16 @@
           Posts
         </div>
         <div class="options-content">      
-          To Fill
+          <table class="table table-condensed">
+            <tbody>
+              <% @topposts.each do |post|%>
+              <tr>
+                <td><%= link_to post.title, post %></td>
+                <td><%= post.views %> views</td>
+              </tr>  
+              <% end %>
+            </tbody>
+          </table>
         </div>
       </div>
       <div class="options-section">

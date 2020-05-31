@@ -1,0 +1,20 @@
+<tr>
+  <td class="post">
+    <div class="post-image">
+      <%= gravatar_for(post.user, 48) %>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="post-heading col-xs-12">
+          <%= link_to post.title, post %>
+        </div>
+        <div class="post-details col-xs-9">
+          Post by <%= link_to post.user.displayname, post.user %>, Date: <%= post.created_at %>, Topic: <%= post.topic.name %>
+        </div>
+        <div class="post-stats col-xs-3">
+          [X] commments | <%= post.views %> views
+        </div>
+      </div>
+    </div>
+  </td>
+</tr>

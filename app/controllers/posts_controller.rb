@@ -8,6 +8,7 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
+    @post.increment!(:views)
     @user = @post.user
     @topic = @post.topic
   end

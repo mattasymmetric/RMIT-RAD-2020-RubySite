@@ -275,6 +275,10 @@ table {
     .post-heading {
       @extend h5;
     }
+    .post-heading > :hover{
+      color: orange;
+      text-decoration: none;
+    }
     .post-details,
     .post-stats {
       @extend h6;
