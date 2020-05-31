@@ -1,5 +1,7 @@
 # RAD2020 Assignmnet
 
+Changed README for pull request.
+
 ### Git Repo Link
 https://github.com/mattasymmetric/RAD2020_s3780012
 
